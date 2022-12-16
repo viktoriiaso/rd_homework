@@ -7,8 +7,7 @@ some_text = input('Enter some text')
 print(type(some_text))
 
 if some_text.isdigit():
-    num = int(some_text)%2
-    if num == 0:
+    if int(some_text)%2 == 0:
         print('number is even')
     else:
         print('number is odd')
