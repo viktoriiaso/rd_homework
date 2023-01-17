@@ -23,10 +23,13 @@ class ContextManagerDz():
     def __enter__(self):
         print('==========')
     def __exit__(self, exc_type, exc_value, exc_traceback):
+        if exc_value:
+            print(f'Value of the exception is {exc_value}')
+            return True
         print('==========')
 
 with ContextManagerDz() as manager:
-    print('Some text')
+    print(1/0)
 
 # Написати конструкцію try ... except ... else ... finally, яка буде робити точно те ж, що і менеджер контексту із попереднього завдання.
 
